@@ -4,7 +4,7 @@ require "spec_helper"
 
 describe "Create Curso" do
 
-   let!(:course) { FactoryGirl.create(:course) }
+   let!(:course) { courses(:turma_1) }
 
    context "with valid data" do
       before do

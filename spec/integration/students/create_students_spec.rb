@@ -4,7 +4,7 @@ require "spec_helper"
 
 describe "Create Student" do
 
-   let!(:student) { FactoryGirl.create(:student) }
+   let!(:student) { students(:carlos_eduardo) }
 
    context "with valid data" do
       before do

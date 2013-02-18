@@ -4,7 +4,7 @@ require "spec_helper"
 
 describe "Create teacher" do
 
-	let!(:teacher) { FactoryGirl.create(:teacher) }
+	let!(:teacher) { teachers(:athila_soares) }
 
 	context "with valid data" do
 		before do
@@ -17,7 +17,7 @@ describe "Create teacher" do
 			click_button "Cadastrar professor"
 		end
 
-		it "redirects to the theacher page" do
+		it "redirects to the teacher page" do
 			current_path.should eql(teachers_path)
 		end
 

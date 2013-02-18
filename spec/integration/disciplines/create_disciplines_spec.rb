@@ -4,7 +4,7 @@ require "spec_helper"
 
 describe "Create Discipline" do
 
-   let!(:discipline) { FactoryGirl.create(:discipline) }
+   let!(:discipline) { disciplines(:banco_de_dados) }
 
    context "with valid data" do
       before do
