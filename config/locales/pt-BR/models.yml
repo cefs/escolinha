@@ -3,3 +3,5 @@ pt-BR:
       attributes:
          teacher:
             name: "Nome do professor"
+         course:
+            name: "Nome da turma"

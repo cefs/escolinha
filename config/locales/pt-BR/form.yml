@@ -2,8 +2,8 @@ pt-BR:
    form:
       error_messages: "Verifique o formulário antes de continuar."
       labels:
-      email: "E-mail"
-      password: "Senha"
+         email: "E-mail"
+         password: "Senha"
 
    buttons:
       login: "Entrar"
@@ -12,3 +12,5 @@ pt-BR:
       submit:
          teacher:
             create: "Cadastrar professor"
+         course:
+            create: "Cadastrar turma"

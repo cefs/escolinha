@@ -3,6 +3,7 @@ pt-BR:
       link:
          teachers:
             list: "Professores"
-            register: "Cadastre o professor"            
-   
-
+            register: "Cadastre o professor"
+         courses:
+            list: "Turmas"            
+            register: "Cadastre a turma"
