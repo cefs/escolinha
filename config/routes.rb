@@ -4,4 +4,5 @@ Escolinha::Application.routes.draw do
   resources :teachers
   resources :courses
   resources :students
+  resources :disciplines  
 end

@@ -16,3 +16,5 @@ pt-BR:
             create: "Cadastrar turma"
          student:
             create: "Cadastrar aluno"
+         discipline:
+            create: "Cadastrar disciplina "

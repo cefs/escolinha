@@ -7,3 +7,5 @@ pt-BR:
             name: "Nome da turma"
          student:
             name: "Nome do aluno"
+         discipline:
+            name: "Nome da disciplina"

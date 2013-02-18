@@ -10,3 +10,7 @@ pt-BR:
          students:
             list: "Alunos"
             register: "Cadastre o aluno"
+         disciplines:
+            list: "Disciplinas"
+            register: "Cadastre a disciplina"
+
