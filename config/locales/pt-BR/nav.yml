@@ -7,3 +7,6 @@ pt-BR:
          courses:
             list: "Turmas"            
             register: "Cadastre a turma"
+         students:
+            list: "Alunos"
+            register: "Cadastre o aluno"
