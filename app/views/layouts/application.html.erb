@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Escolinha</title>
+  <%#= stylesheet_link_tag    "application", :media => "all" %>
+  
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+   <nav>
+      <li><%= link_to t("nav.link.teachers.list"), teachers_path %></li>
+   </nav>
+   
+   <% flash.each do |type, message| %>
+      <p class="<%= type%> message"><%= message %></p>
+   <% end %>
+
+	<%= yield %>
+
+<%#= javascript_include_tag "application" %>
+</body>
+</html>

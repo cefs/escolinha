@@ -1,0 +1,8 @@
+pt-BR:
+   nav:
+      link:
+         teachers:
+            list: "Professores"
+            register: "Cadastre o professor"            
+   
+
