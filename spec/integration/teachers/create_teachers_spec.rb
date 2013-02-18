@@ -3,13 +3,16 @@
 require "spec_helper"
 
 describe "Create teacher" do
+
+	let!(:teacher) { FactoryGirl.create(:teacher) }
+
 	context "with valid data" do
 		before do
 			visit "/"
 			click_link "Professores"
 			click_link "Cadastre o professor"
 
-			fill_in "Nome do professor", :with => "Áthila Soáres"
+			fill_in "Nome do professor", :with => teacher.name
 
 			click_button "Cadastrar professor"
 		end

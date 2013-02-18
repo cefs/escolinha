@@ -3,13 +3,16 @@
 require "spec_helper"
 
 describe "Create Curso" do
+
+   let!(:course) { FactoryGirl.create(:course) }
+
    context "with valid data" do
       before do
          visit "/"
          click_link "Turmas"
          click_link "Cadastre a turma"
 
-         fill_in "Nome da turma", :with => "Turma 1"
+         fill_in "Nome da turma", :with => course.name
 
          click_button "Cadastrar turma"
       end

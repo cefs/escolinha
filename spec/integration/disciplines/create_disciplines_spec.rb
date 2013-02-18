@@ -3,13 +3,16 @@
 require "spec_helper"
 
 describe "Create Discipline" do
+
+   let!(:discipline) { FactoryGirl.create(:discipline) }
+
    context "with valid data" do
       before do
          visit "/"
          click_link "Disciplinas"
          click_link "Cadastre a disciplina"
 
-         fill_in "Nome da disciplina", :with => "Português"
+         fill_in "Nome da disciplina", :with => discipline.name
 
          click_button "Cadastrar disciplina"
       end

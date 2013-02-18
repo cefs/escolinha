@@ -3,13 +3,16 @@
 require "spec_helper"
 
 describe "Create Student" do
+
+   let!(:student) { FactoryGirl.create(:student) }
+
    context "with valid data" do
       before do
          visit "/"
          click_link "Alunos"
          click_link "Cadastre o aluno"
 
-         fill_in "Nome do aluno", :with => "Carlos Eduardo"
+         fill_in "Nome do aluno", :with => student.name
 
          click_button "Cadastrar aluno"
       end
