@@ -10,7 +10,7 @@ class DisciplinesController < ApplicationController
       @discipline = Discipline.new params[:discipline]
 
       if @discipline.save
-         flash[:notice] = "A disciplina foi criada com sucesso!"
+         flash[:notice] = t("flash.disciplines.create.notice")
          redirect_to disciplines_path
       else
          render :new

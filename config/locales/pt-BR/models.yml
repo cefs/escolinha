@@ -9,3 +9,7 @@ pt-BR:
             name: "Nome do aluno"
          discipline:
             name: "Nome da disciplina"
+         room:
+            course_id: "Curso"
+            teacher_id: "Professor"
+            discipline_id: "Disciplina"

@@ -14,6 +14,8 @@ describe "Create Student", :js => false do
 
          fill_in "Nome do aluno", :with => student.name
 
+         page.should have_selector('select#student_course_id')
+
          click_button "Cadastrar aluno"
       end
 

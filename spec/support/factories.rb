@@ -17,6 +17,12 @@ FactoryGirl.define do
       name "Banco de Dados"
    end
 
+   factory :room do
+      association :course
+      association :teacher
+      association :discipline
+   end
+
    preload do
       factory(:carlos_eduardo) do
          FactoryGirl.create(:student)

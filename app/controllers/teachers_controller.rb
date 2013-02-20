@@ -11,7 +11,7 @@ class TeachersController < ApplicationController
       @teacher = Teacher.new params[:teacher]      
 
       if @teacher.save
-         flash[:notice] = "O professor foi cadastrado com sucesso!"
+         flash[:notice] = t("flash.teachers.create.notice")
          redirect_to teachers_path
       else
          render :new

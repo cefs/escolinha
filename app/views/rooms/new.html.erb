@@ -1,0 +1,21 @@
+<%= form_for @room do |f| %>     
+   <p>
+      <%= f.label :course_id %>
+      <%= f.collection_select :course_id, Course.all, :id, :name, :include_blank => true  %>
+   </p>
+
+   <p>
+      <%= f.label :teacher_id %>
+      <%= f.collection_select :teacher_id, Teacher.all, :id, :name, :include_blank => true  %>
+   </p>
+
+   <p>
+      <%= f.label :discipline_id %>
+      <%= f.collection_select :discipline_id, Discipline.all,  :id, :name, :include_blank => true  %>      
+   </p>
+
+   <p>
+      <%= f.submit %>
+   </p>
+
+<% end %>

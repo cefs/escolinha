@@ -10,7 +10,7 @@ class StudentsController < ApplicationController
       @student = Student.new params[:student]
 
       if @student.save
-         flash[:notice] = "O aluno foi cadastrado com successo!"
+         flash[:notice] = t("flash.students.create.notice")
          redirect_to students_path
       else
          render :new

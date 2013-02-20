@@ -5,4 +5,5 @@ Escolinha::Application.routes.draw do
   resources :courses
   resources :students
   resources :disciplines  
+  resources :rooms
 end

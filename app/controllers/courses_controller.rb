@@ -6,11 +6,15 @@ class CoursesController < ApplicationController
       @course = Course.new
    end
 
+   def show
+      @course = Course.find params[:id]
+   end
+
    def create
       @course = Course.new params[:course]
 
       if @course.save
-         flash[:notice] = "O turma foi cadastrada com sucesso!"
+         flash[:notice] = t("flash.courses.create.notice")
          redirect_to courses_path
       else
          render :new

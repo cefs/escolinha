@@ -1,1 +1,14 @@
 pt-BR:
+   flash:
+      courses:
+         create:
+            notice: "A turma foi cadastrada com sucesso!"
+      students:
+         create:
+            notice: "O aluno foi cadastrado com successo!"      
+      disciplines:
+         create:
+            notice: "A disciplina foi criada com sucesso!"      
+      teachers:
+         create:
+            notice: "O professor foi cadastrado com sucesso!"      

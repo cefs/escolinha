@@ -22,7 +22,7 @@ describe "Create Curso" do
       end
 
       it "displays success message" do
-         page.should have_content("O turma foi cadastrada com sucesso!")
+         page.should have_content("A turma foi cadastrada com sucesso!")
       end
    end
 

@@ -8,6 +8,11 @@
    </p>
 
    <p>
+      <%= f.label :course_id %>
+      <%= f.collection_select :course_id, Course.all, :id, :name, :include_blank => true  %>
+   </p>
+
+   <p>
       <%= f.submit %>
    </p>
 <% end %>

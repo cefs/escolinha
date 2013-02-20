@@ -17,4 +17,6 @@ pt-BR:
          student:
             create: "Cadastrar aluno"
          discipline:
-            create: "Cadastrar disciplina "
+            create: "Cadastrar disciplina"
+         room:
+            create: "Enviar dados"

@@ -13,4 +13,6 @@ pt-BR:
          disciplines:
             list: "Disciplinas"
             register: "Cadastre a disciplina"
+         rooms:
+            new: "Monte a sala de aula"
 

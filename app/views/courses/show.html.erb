@@ -1,0 +1,23 @@
+<h2>
+   <%= @course.name %>
+</h2>
+
+<h4>Disciplinas:</h4>
+<section class="box">
+   <dl>
+      <% Room.where("course_id = ?", @course.id).each do |t| %>
+         <dd><%= t.discipline.name %><small> ministrado(a) por </small><%= t.teacher.name %></dd>
+      <% end %>
+   </dl>
+</section>
+
+<h4>Alunos:</h4>
+<section class="box">
+   <dl>
+      <% @course.students.each do |s| %>
+         <dd>
+            <%= s.name %>
+         </dd>
+      <% end %>
+   </dl>
+</section>
