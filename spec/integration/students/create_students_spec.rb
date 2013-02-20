@@ -2,7 +2,7 @@
 
 require "spec_helper"
 
-describe "Create Student" do
+describe "Create Student", :js => false do
 
    let!(:student) { students(:carlos_eduardo) }
 

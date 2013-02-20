@@ -2,18 +2,22 @@
 <html>
 <head>
   <title>Escolinha</title>
-  <%#= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
   
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-  <%= render "shared/nav" %>
+   <div class="header">
+      <%= render "shared/nav" %>
+
+      <%= render "shared/flash_messages" %>
+   </div>
    
-  <%= render "shared/flash_messages" %>
+   <div class="content">
+      <%= yield %>
+   </div>
 
-	<%= yield %>
-
-<%#= javascript_include_tag "application" %>
+   <%= javascript_include_tag "application" %>
 </body>
 </html>
