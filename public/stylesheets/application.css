@@ -71,3 +71,13 @@ p.notice{
    background: #025951;
    color: #fff;
 }
+
+.table{
+   float: left;
+   width: 100%;
+}
+
+.table tr{
+   border-bottom: 1px solid;
+}
+
