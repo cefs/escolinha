@@ -24,7 +24,7 @@ describe "Create Student", :js => false do
       end
 
       it "displays success message" do
-         page.should have_content("O aluno foi cadastrado com successo!")
+         page.should have_content("O aluno foi cadastrado com sucesso!")
       end
    end
 

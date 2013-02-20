@@ -67,3 +67,7 @@ dl.error-messages dt{
    padding-left: 5px;
 }
 
+p.notice{
+   background: #025951;
+   color: #fff;
+}

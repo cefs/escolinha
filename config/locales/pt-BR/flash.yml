@@ -5,7 +5,9 @@ pt-BR:
             notice: "A turma foi cadastrada com sucesso!"
       students:
          create:
-            notice: "O aluno foi cadastrado com successo!"      
+            notice: "O aluno foi cadastrado com sucesso!"      
+         update:
+            notice: "O aluno foi atualizado com sucesso!"
       disciplines:
          create:
             notice: "A disciplina foi criada com sucesso!"      

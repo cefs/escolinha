@@ -7,6 +7,7 @@ pt-BR:
             name: "Nome da turma"
          student:
             name: "Nome do aluno"
+            course_id: "Curso"
          discipline:
             name: "Nome da disciplina"
          room:

@@ -1,5 +1,6 @@
 class StudentsController < ApplicationController
    def index
+      @students = Student.order(:name)
    end   
 
    def new
@@ -14,6 +15,21 @@ class StudentsController < ApplicationController
          redirect_to students_path
       else
          render :new
+      end
+   end
+
+   def edit
+      @student = Student.find(params[:id])
+   end
+
+   def update
+      @student = Student.find params[:id]
+
+      if @student.update_attributes params[:student]
+         flash[:notice] = t("flash.students.update.notice")
+         redirect_to students_path
+      else
+         render :edit
       end
    end
 end

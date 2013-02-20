@@ -1,0 +1,18 @@
+<%= form_for @student do |f| %>
+
+   <%= render "shared/error_messages", :record => @student %>
+
+   <p>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+   </p>
+
+   <p>
+      <%= f.label :course_id %>
+      <%= f.collection_select :course_id, Course.all, :id, :name, :include_blank => true  %>
+   </p>
+
+   <p>
+      <%= f.submit %>
+   </p>
+<% end %>

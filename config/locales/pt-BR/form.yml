@@ -16,7 +16,12 @@ pt-BR:
             create: "Cadastrar turma"
          student:
             create: "Cadastrar aluno"
+            update: "Atualizar aluno"
          discipline:
             create: "Cadastrar disciplina"
          room:
             create: "Enviar dados"
+
+      link:
+         student:
+            edit: "Editar"

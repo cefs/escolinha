@@ -1,3 +1,17 @@
+<table>
+   <tr>
+      <th>Nome</th>
+      <th></th>
+   </tr>
+
+   <% @students.each do |student| %>
+      <tr>
+         <td><%= student.name %></td>
+         <td><%= link_to(t("helpers.link.student.edit"), edit_student_path(student))%></td>
+      </tr>
+   <% end %>
+</table>
+
 <p>
    <%= link_to t("nav.link.students.register"), new_student_path %>
 </p>
