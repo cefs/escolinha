@@ -1,7 +1,6 @@
 source :rubygems
 
 gem 'rails', '3.2.11'
-gem 'sqlite3'
 
 group :development do
 	gem "pry", :require => false
@@ -12,6 +11,7 @@ end
 group :development, :test do
 	gem "rspec-rails"
 	gem "capybara"
+   gem 'sqlite3'
 end
 
 group :test do
