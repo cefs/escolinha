@@ -1,4 +1,4 @@
-h1, h2, h3, h4, h5, h6 { line-height: 1.1; color:#191817;}
+h1, h2, h3, h4, h5, h6 { line-height: 1.1; color:#191817; border-bottom:3px solid; padding-top: 50px;}
 
 body{
    font: 16px/1.5 "Lucida Grande",

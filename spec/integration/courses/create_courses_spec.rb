@@ -9,7 +9,7 @@ describe "Create Curso" do
    context "with valid data" do
       before do
          visit "/"
-         click_link "Turmas"
+         click_link "Cursos"
          click_link "Cadastre a turma"
 
          fill_in "Nome da turma", :with => course.name
@@ -29,7 +29,7 @@ describe "Create Curso" do
    context "with invalid data" do
       before do
          visit "/"
-         click_link "Turmas"
+         click_link "Cursos"
          click_link "Cadastre a turma"
 
          click_button "Cadastrar turma"         
