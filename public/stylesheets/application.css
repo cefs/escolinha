@@ -40,3 +40,30 @@ p{ color: #FFF; text-align: justify; padding: 5px;}
    background: #696F75;
    padding: 3px;
 }
+
+a{
+   color: #182128;
+   padding: 2px;
+   text-decoration: none;
+}
+
+a:hover{
+   text-decoration: none;  
+   border-bottom: 1px solid;
+}
+
+dl.error-messages{
+   background: #440000;
+   color:#8C5332;
+}
+
+
+dl.error-messages dd{
+   font-size: 12px;
+   padding-bottom: 2px;
+}
+
+dl.error-messages dt{
+   padding-left: 5px;
+}
+

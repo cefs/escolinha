@@ -1,3 +1,5 @@
+#encoding: UTF-8
+
 require "spec_helper"
 
 describe "Create Rooms" do
@@ -41,6 +43,19 @@ describe "Create Rooms" do
    end
 
    context "with invalid data" do
-      
+      before do
+         visit "/"
+
+         click_link "Monte a sala de aula"
+         click_button "Enviar dados"
+      end
+
+      it "renders form" do
+         current_path.should eql(rooms_path)
+      end
+
+      it "displays error messages" do
+         page.should have_content("Verifique o formulário antes de continuar.")
+      end
    end
 end

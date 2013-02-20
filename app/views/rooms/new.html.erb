@@ -1,4 +1,7 @@
 <%= form_for @room do |f| %>     
+
+   <%= render "shared/error_messages", :record => @room %>
+
    <p>
       <%= f.label :course_id %>
       <%= f.collection_select :course_id, Course.all, :id, :name, :include_blank => true  %>
