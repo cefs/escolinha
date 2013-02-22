@@ -1,4 +1,4 @@
-class Student < ActiveRecord::Base
+class Student < ActiveRecord::Bas
    attr_accessible :name, :course_id
 
    belongs_to :course
