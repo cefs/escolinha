@@ -15,6 +15,7 @@ pt-BR:
             update: "Atualizar professor"
          course:
             create: "Cadastrar turma"
+            update: "Atualizar turma"
          student:
             create: "Cadastrar aluno"
             update: "Atualizar aluno"
@@ -27,4 +28,6 @@ pt-BR:
          student:
             edit: "Editar"
          teacher:
+            edit: "Editar"
+         course:
             edit: "Editar"

@@ -5,7 +5,7 @@ pt-BR:
             list: "Professores"
             register: "Cadastre o professor"
          courses:
-            list: "Cursos"            
+            list: "Turmas"            
             register: "Cadastre a turma"
          students:
             list: "Alunos"

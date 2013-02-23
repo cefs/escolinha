@@ -3,6 +3,8 @@ pt-BR:
       courses:
          create:
             notice: "A turma foi cadastrada com sucesso!"
+         update:
+            notice: "A turma foi atualizada com sucesso!"
       students:
          create:
             notice: "O aluno foi cadastrado com sucesso!"      
@@ -14,3 +16,5 @@ pt-BR:
       teachers:
          create:
             notice: "O professor foi cadastrado com sucesso!"      
+         update:
+            notice: "O professor foi atualizado com sucesso!"

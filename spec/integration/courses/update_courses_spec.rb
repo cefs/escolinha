@@ -1,28 +1,28 @@
-#encoding: UTF-8
+# encoding: UTF-8
 
 require "spec_helper"
 
-describe "Create Curso" do
+describe "Update Courses" do
 
-   let!(:course) { courses(:turma_1) }
+   let(:course) { courses(:turma_1) }
 
    context "with valid data" do
       before do
          visit "/"
          click_link "Turmas"
-         click_link "Cadastre a turma"
+         click_link "Editar"
 
          fill_in "Nome da turma", :with => course.name
 
-         click_button "Cadastrar turma"
+         click_button "Atualizar turma"
       end
 
-      it "redirects to the courses page" do
+      it "redirects to courses page" do
          current_path.should eql(courses_path)
       end
 
-      it "displays success message" do
-         page.should have_content("A turma foi cadastrada com sucesso!")
+      it "displays success messages" do
+         page.should have_content("A turma foi atualizada com sucesso!")
       end
    end
 
@@ -30,13 +30,15 @@ describe "Create Curso" do
       before do
          visit "/"
          click_link "Turmas"
-         click_link "Cadastre a turma"
+         click_link "Editar"
 
-         click_button "Cadastrar turma"         
+         fill_in "Nome da turma", :with => nil
+
+         click_button "Atualizar turma"
       end
 
-      it "renders form page" do
-         current_path.should eql(courses_path)
+      it "render edit form" do
+         current_path.should eql("/courses/#{course.id}")
       end
 
       it "displays error messages" do
