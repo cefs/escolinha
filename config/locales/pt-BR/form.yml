@@ -21,6 +21,7 @@ pt-BR:
             update: "Atualizar aluno"
          discipline:
             create: "Cadastrar disciplina"
+            update: "Atualizar disciplina"
          room:
             create: "Enviar dados"
 
@@ -30,4 +31,6 @@ pt-BR:
          teacher:
             edit: "Editar"
          course:
+            edit: "Editar"
+         discipline: 
             edit: "Editar"

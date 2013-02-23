@@ -1,5 +1,6 @@
 class DisciplinesController < ApplicationController
    def index
+      @disciplines = Discipline.all
    end
 
    def new
@@ -14,6 +15,21 @@ class DisciplinesController < ApplicationController
          redirect_to disciplines_path
       else
          render :new
+      end
+   end
+
+   def edit
+      @discipline = Discipline.find params[:id]
+   end
+
+   def update
+      @discipline = Discipline.find params[:id]
+
+      if @discipline.update_attributes params[:discipline]
+         redirect_to disciplines_path
+         flash[:notice] = t("flash.disciplines.update.notice")
+      else
+         render :edit
       end
    end
 end

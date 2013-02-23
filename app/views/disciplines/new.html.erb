@@ -1,15 +1,3 @@
 <h2>Cadastrar disciplina</h2>
 
-<%= form_for @discipline do |f| %>
-
-   <%= render "shared/error_messages", :record => @discipline %>
-
-   <p>
-      <%= f.label :name %>
-      <%= f.text_field :name %>
-   </p>
-
-   <p>
-      <%= f.submit %>
-   </p>
-<% end %>
+<%= render "form" %>

@@ -13,6 +13,8 @@ pt-BR:
       disciplines:
          create:
             notice: "A disciplina foi criada com sucesso!"      
+         update:
+            notice: "A disciplina foi atualizada com sucesso!"
       teachers:
          create:
             notice: "O professor foi cadastrado com sucesso!"      
