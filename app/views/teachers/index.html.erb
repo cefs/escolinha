@@ -1,3 +1,20 @@
+<h2>Professores Cadastrados</h2>
+
+<table class="table">
+   <tr>
+      <th>Nome</th>
+      <th></th>
+   </tr>
+
+   <% @teachers.each do |teacher| %>
+      <tr>
+         <td><%= teacher.name %></td>
+         <td><%= link_to(t("helpers.link.teacher.edit"), edit_teacher_path(teacher))%></td>
+      </tr>
+   <% end %>
+</table>
+
+
 <p>
    <%= link_to t("nav.link.teachers.register"), new_teacher_path %>
 </p>

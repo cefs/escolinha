@@ -1,0 +1,14 @@
+<%= form_for @teacher do |f| %>
+
+   <%= render "shared/error_messages", :record => @teacher %>
+
+   <p>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+      <%#= error_for @teacher, :name %>
+   </p>
+
+   <p>
+      <%= f.submit %>
+   </p>
+<% end %>
