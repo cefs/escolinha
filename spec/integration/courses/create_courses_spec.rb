@@ -1,10 +1,10 @@
 #encoding: UTF-8
 
-require "spec_helper"
+   require "spec_helper"
 
 describe "Create Curso" do
 
-   let!(:course) { courses(:turma_1) }
+   let(:course) { courses(:turma_1) }
 
    context "with valid data" do
       before do

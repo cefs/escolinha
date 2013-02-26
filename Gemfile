@@ -11,7 +11,8 @@ end
 group :development, :test do
 	gem "rspec-rails"
 	gem "capybara"
-   gem 'sqlite3'
+   gem "sqlite3"
+   #gem "database_cleaner"
 end
 
 group :test do

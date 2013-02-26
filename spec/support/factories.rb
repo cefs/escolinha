@@ -2,19 +2,19 @@
 
 FactoryGirl.define do
    factory :teacher do
-      name "Áthila Soáres"
+      sequence(:name) {|n| "Áthila Soáres #{n}" }
    end
 
    factory :student do
-      name "Carlos Eduardo"
+      sequence(:name) {|n| "Carlos Eduardo #{n}" }
    end
 
    factory :course do
-      name "Turma 1"
+      sequence(:name) {|n| "Turma 1 #{n}" }
    end
 
    factory :discipline do
-      name "Banco de Dados"
+      sequence(:name) {|n| "Banco de Dados #{n}" }
    end
 
    factory :room do

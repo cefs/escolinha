@@ -9,6 +9,7 @@
    <% @courses.each do |course| %>
       <tr>
          <td><%= course.name %></td>
+         <td><%= link_to(t("helpers.link.course.show"), course_path(course))%></td>
          <td><%= link_to(t("helpers.link.course.edit"), edit_course_path(course))%></td>
       </tr>
    <% end %>

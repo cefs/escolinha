@@ -19,4 +19,4 @@ pt-BR:
          create:
             notice: "O professor foi cadastrado com sucesso!"      
          update:
-            notice: "O professor foi atualizado com sucesso!"
+            notice: "O professor foi atualizado com sucesso!"            
