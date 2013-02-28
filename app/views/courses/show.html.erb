@@ -2,7 +2,8 @@
    <%= @course.name %>
 </h2>
 
-<h4>Disciplinas:</h4>
+
+<h4>Disciplinas: <%= Room.where("course_id = ?", @course.id).count %></h4>
 <section class="box">
    <dl>
       <% Room.where("course_id = ?", @course.id).each do |t| %>
@@ -11,7 +12,7 @@
    </dl>
 </section>
 
-<h4>Alunos:</h4>
+<h4>Alunos: <%= @course.students_count %></h4>
 <section class="box">
    <dl>
       <% @course.students.each do |s| %>
