@@ -1,0 +1,5 @@
+pt-BR:
+   paginate:
+      previous: "anterior"
+      next: "próximo"
+      page: "página %{page}"

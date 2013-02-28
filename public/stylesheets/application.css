@@ -78,3 +78,9 @@ p.notice{
    border-bottom: 1px solid;
 }
 
+
+.paginate { overflow: hidden; list-style:none;}
+.paginate li { float: left; }
+.paginate li.previous-page:after { content: "«"; padding: 0 5px; }
+.paginate li.next-page:before { content: "»"; padding: 0 5px; }
+.paginate .disabled { display: none; }

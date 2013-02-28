@@ -1,6 +1,6 @@
 class DisciplinesController < ApplicationController
    def index
-      @disciplines = Discipline.all
+      @disciplines = Discipline.paginate :page => params[:page], :size => 4   
    end
 
    def new

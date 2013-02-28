@@ -1,6 +1,6 @@
 class CoursesController < ApplicationController
    def index
-      @courses = Course.all
+      @courses = Course.paginate :page => params[:page], :size => 4
    end
 
    def new

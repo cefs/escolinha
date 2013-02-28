@@ -1,5 +1,9 @@
 <h2>Turmas Cadastradas</h2>
 
+<p>
+   <%= link_to t("nav.link.courses.register"), new_course_path %>
+</p>
+
 <table class="table">
    <tr>
       <th>Nome</th>
@@ -16,5 +20,6 @@
 </table>
 
 <p>
-   <%= link_to t("nav.link.courses.register"), new_course_path %>
+   <%= paginate @courses, :size => 4 %>
 </p>
+

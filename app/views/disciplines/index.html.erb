@@ -1,5 +1,9 @@
 <h2>Disciplinas Cadastradas</h2>
 
+<p>
+   <%= link_to t("nav.link.disciplines.register"), new_discipline_path %>
+</p>
+
 <table class="table">
    <tr>
       <th>Nome</th>
@@ -15,5 +19,5 @@
 </table>
 
 <p>
-   <%= link_to t("nav.link.disciplines.register"), new_discipline_path %>
+   <%= paginate @disciplines, :size => 4 %>
 </p>

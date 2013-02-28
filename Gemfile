@@ -1,6 +1,7 @@
 source :rubygems
 
 gem 'rails', '3.2.11'
+gem 'paginate'
 
 group :development do
 	gem "pry", :require => false
