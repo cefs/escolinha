@@ -42,7 +42,7 @@ describe "Create Student", :js => false do
       end
 
       it "displays error messages" do
-         page.should have_content("Verifique o formulário antes de continuar.")
+         page.should have_content("Verifique o formulário antes de continuar:")
       end
    end
 end

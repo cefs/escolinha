@@ -2,6 +2,11 @@
    <%= @teacher.name %>
 </h2>
 
+
+<% @rooms.each do |item| %>
+   <%= item.inspect %><br />
+<% end %>
+
 <section class="box">
    <h4>Turma(s)</h4>
    <% unless @rooms.empty? %>

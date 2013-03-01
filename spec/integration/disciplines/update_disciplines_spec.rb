@@ -38,11 +38,11 @@ describe "Update Disciplines" do
       end
 
       it "render edit form" do
-         current_path.should eql("/disciplines/#{discipline.id}")
+         current_path.should eql("/disciplines/#{discipline.slug}")
       end
 
       it "displays error messages" do
-         page.should have_content("Verifique o formulário antes de continuar.")
+         page.should have_content("Verifique o formulário antes de continuar:")
       end
    end
 end

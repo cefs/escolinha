@@ -41,11 +41,11 @@ describe "Update Student", :js => false do
       end
 
       it "renders edit form" do
-         current_path.should eql("/students/#{student.id}")
+         current_path.should eql("/students/#{student.slug}")
       end
 
       it "displays error messages" do
-         page.should have_content("Verifique o formulário antes de continuar.")
+         page.should have_content("Verifique o formulário antes de continuar:")
       end
    end
 end

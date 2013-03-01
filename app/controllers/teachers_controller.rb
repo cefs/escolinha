@@ -6,7 +6,7 @@ class TeachersController < ApplicationController
    def show
       @teacher = Teacher.find params[:id]      
 
-      @rooms = Room.where("teacher_id = ?", @teacher.id)
+      @rooms = Room.select("discipline_id, course_id").where("teacher_id = ?", @teacher.id)
    end
 
    def new
@@ -24,18 +24,18 @@ class TeachersController < ApplicationController
       end
    end
 
-   def edit
-      @teacher = Teacher.find params[:id]      
-   end
-
-   def update
-      @teacher = Teacher.find params[:id]
-
-      if @teacher.update_attributes  params[:teacher]
-         flash[:notice] = t("flash.teachers.update.notice")
-         redirect_to teachers_path
-      else
-         render :edit
+      def edit
+         @teacher = Teacher.find params[:id]      
       end
-   end
+
+      def update
+         @teacher = Teacher.find params[:id]
+
+         if @teacher.update_attributes  params[:teacher]
+            flash[:notice] = t("flash.teachers.update.notice")
+            redirect_to teachers_path
+         else
+            render :edit
+         end
+      end
 end
