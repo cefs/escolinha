@@ -1,6 +1,6 @@
 class TeachersController < ApplicationController
    def index
-      @teachers = Teacher.paginate :page => params[:page], :size => 4
+      @teachers = Teacher.paginate :page => params[:page], :size => 10
    end
 
    def show

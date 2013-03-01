@@ -3,7 +3,7 @@ class StudentsController < ApplicationController
    helper_method :courses
 
    def index
-      @students = Student.paginate :page => params[:page], :size => 4
+      @students = Student.paginate :page => params[:page], :size => 10
    end   
 
    def new
