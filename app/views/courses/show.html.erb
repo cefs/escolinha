@@ -6,6 +6,7 @@
 <h4>Disciplinas</h4>
 
    <% unless @disciplines_teachers.empty? %>
+
    <dl>
       <% @disciplines_teachers.each do |room| %>
 
@@ -20,18 +21,19 @@
 
       <% end %>
    </dl>
+
    <% else %>
+
       Nenhum registro!
+
    <% end %>
-
-
 </section>
 
 
 <section class="box">
 <h4>Alunos</h4>
 
-<% unless @course.students.empty? %>
+<% unless @course.students(true).empty? %>
    <dl>
 
       <% @course.students.each do |student| %>
@@ -44,8 +46,6 @@
                <%=link_to "Alterar", edit_student_path(student) %>   
             </small>
          </dd>
-
-
       <% end %>      
    </dl>
 
