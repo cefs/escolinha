@@ -6,19 +6,37 @@
 <h4>Disciplinas: <%= Room.where("course_id = ?", @course.id).count %></h4>
 <section class="box">
    <dl>
-      <% Room.where("course_id = ?", @course.id).each do |t| %>
-         <dd><%= t.discipline.name %><small> ministrado(a) por </small><%= t.teacher.name %></dd>
+      <% Room.where("course_id = ?", @course.id).each do |room| %>
+
+         <dd><%= room.discipline.name %> ministrado(a) por <%= room.teacher.name %></dd>
+
+         <dd>
+            <small>
+               <%=link_to "Remover", room ,method: :delete,
+               data: {confirm: "confirmar remoção ?"} %>   
+            </small>
+         </dd>
+
       <% end %>
    </dl>
 </section>
 
+
 <h4>Alunos: <%= @course.students_count %></h4>
 <section class="box">
    <dl>
-      <% @course.students.each do |s| %>
+      <% @course.students.each do |student| %>
          <dd>
-            <%= s.name %>
+            <%= student.name %>
          </dd>
+
+         <dd>
+            <small>
+               <%= link_to "Remover", reset_student_path(student), method: :put,
+               data: {confirma: "confirmar remoção ?"} %>
+            </small>
+         </dd>
+
       <% end %>
    </dl>
 </section>

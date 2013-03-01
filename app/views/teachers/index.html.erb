@@ -8,11 +8,13 @@
    <tr>
       <th>Nome</th>
       <th></th>
+      <th></th>
    </tr>
 
    <% @teachers.each do |teacher| %>
       <tr>
          <td><%= teacher.name %></td>
+         <td><%= link_to(t("helpers.link.teacher.show"), teacher_path(teacher))%></td>
          <td><%= link_to(t("helpers.link.teacher.edit"), edit_teacher_path(teacher))%></td>
       </tr>
    <% end %>

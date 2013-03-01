@@ -3,6 +3,10 @@ class TeachersController < ApplicationController
       @teachers = Teacher.paginate :page => params[:page], :size => 4
    end
 
+   def show
+      @teacher = Teacher.find params[:id]      
+   end
+
    def new
       @teacher = Teacher.new
    end
