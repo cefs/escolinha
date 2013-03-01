@@ -6,7 +6,7 @@
    <h4>Turma(s)</h4>
    <% unless @rooms.empty? %>
       <dl>
-         <% @rooms.group(:course_id).each do |room| %>
+         <% @rooms.each do |room| %>
             <dt><%= link_to room.course.name, course_path(room.course.id) %></dt>
          <% end %>
       </dl>
@@ -20,7 +20,7 @@
    <h4>Disciplina(s)</h4>
    <% unless @rooms.empty? %>
       <dl>
-         <% @rooms.group(:discipline_id).each do |room| %>
+         <% @rooms.each do |room| %>
             <dt><%= link_to room.discipline.name, edit_discipline_path(room.discipline.id) %></dt>
          <% end %>
       </dl>
