@@ -5,11 +5,5 @@ Escolinha::Application.routes.draw do
    resources :courses
    resources :disciplines  
    resources :rooms
-
-   resources :students do
-      member do
-         put "reset" => "students#reset"
-      end
-   end
-
+   resources :students
 end

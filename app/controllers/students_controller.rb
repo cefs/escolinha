@@ -32,15 +32,4 @@ class StudentsController < ApplicationController
          render :edit
       end
    end
-
-   def reset
-      student = Student.find params[:id]     
-      id = student.course_id
-
-      student.update_attributes :course_id => nil      
-
-      Course.decrement_counter(:students_count, id)
-
-      redirect_to courses_path
-   end
 end

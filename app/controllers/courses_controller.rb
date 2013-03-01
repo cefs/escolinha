@@ -9,6 +9,7 @@ class CoursesController < ApplicationController
 
    def show
       @course = Course.find params[:id]
+      @disciplines_teachers  = Room.where("course_id = ?", @course.id)
    end
 
    def create
