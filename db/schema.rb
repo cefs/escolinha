@@ -11,20 +11,26 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130226053352) do
+ActiveRecord::Schema.define(:version => 20130301075919) do
 
   create_table "courses", :force => true do |t|
     t.string   "name",                          :null => false
     t.datetime "created_at",                    :null => false
     t.datetime "updated_at",                    :null => false
     t.integer  "students_count", :default => 0
+    t.string   "slug"
   end
+
+  add_index "courses", ["slug"], :name => "index_courses_on_slug", :unique => true
 
   create_table "disciplines", :force => true do |t|
     t.string   "name",       :null => false
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "slug"
   end
+
+  add_index "disciplines", ["slug"], :name => "index_disciplines_on_slug", :unique => true
 
   create_table "rooms", :force => true do |t|
     t.integer "discipline_id", :null => false
@@ -37,12 +43,18 @@ ActiveRecord::Schema.define(:version => 20130226053352) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.integer  "course_id"
+    t.string   "slug"
   end
+
+  add_index "students", ["slug"], :name => "index_students_on_slug", :unique => true
 
   create_table "teachers", :force => true do |t|
     t.string   "name",       :null => false
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "slug"
   end
+
+  add_index "teachers", ["slug"], :name => "index_teachers_on_slug", :unique => true
 
 end

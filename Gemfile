@@ -4,6 +4,7 @@ gem 'rails', '3.2.11'
 gem 'jquery-rails'
 gem 'paginate'
 gem 'simple_form'
+gem "friendly_id", "~> 4.0.9"
 
 group :development do
 	gem "pry", :require => false

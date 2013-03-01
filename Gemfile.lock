@@ -48,6 +48,7 @@ GEM
     factory_girl-preload (2.0.2)
       factory_girl (>= 3.0)
     ffi (1.4.0)
+    friendly_id (4.0.9)
     hike (1.2.1)
     i18n (0.6.2)
     journey (1.0.4)
@@ -142,6 +143,7 @@ DEPENDENCIES
   capybara
   factory_girl
   factory_girl-preload
+  friendly_id (~> 4.0.9)
   jquery-rails
   paginate
   pg

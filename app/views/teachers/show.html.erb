@@ -1,3 +1,31 @@
 <h2>
    <%= @teacher.name %>
 </h2>
+
+<section class="box">
+   <h4>Turma(s)</h4>
+   <% unless @rooms.empty? %>
+      <dl>
+         <% @rooms.group(:course_id).each do |room| %>
+            <dt><%= link_to room.course.name, course_path(room.course.id) %></dt>
+         <% end %>
+      </dl>
+   <% else %>
+      Nenhum registro!
+   <% end %>
+
+</section>
+
+<section class="box">
+   <h4>Disciplina(s)</h4>
+   <% unless @rooms.empty? %>
+      <dl>
+         <% @rooms.group(:discipline_id).each do |room| %>
+            <dt><%= link_to room.discipline.name, edit_discipline_path(room.discipline.id) %></dt>
+         <% end %>
+      </dl>
+   <% else %>
+      Nenhum registro!
+   <% end %>
+
+</section>

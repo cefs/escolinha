@@ -5,6 +5,8 @@ class TeachersController < ApplicationController
 
    def show
       @teacher = Teacher.find params[:id]      
+
+      @rooms = Room.where("teacher_id = ?", @teacher.id)
    end
 
    def new
