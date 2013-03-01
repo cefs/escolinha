@@ -1,6 +1,6 @@
 pt-BR:
    form:
-      error_messages: "Verifique o formulário antes de continuar."
+      error_messages: "Verifique o formulário antes de continuar:"
       labels:
          email: "E-mail"
          password: "Senha"

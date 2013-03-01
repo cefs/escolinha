@@ -1,4 +1,7 @@
 class StudentsController < ApplicationController
+
+   helper_method :courses
+
    def index
       @students = Student.paginate :page => params[:page], :size => 4
    end   
@@ -31,5 +34,9 @@ class StudentsController < ApplicationController
       else
          render :edit
       end
+   end
+
+   def courses
+      Course.order(:name)
    end
 end

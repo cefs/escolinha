@@ -31,16 +31,28 @@
 <section class="box">
 <h4>Alunos</h4>
 
-<% unless @course %>
+<% unless @course.students.empty? %>
    <dl>
+
       <% @course.students.each do |student| %>
          <dt>
             <%= student.name %>
          </dt>
-      <% end %>
-      <%= "Nenhum registro" %>
+
+           <dd>
+            <small>
+               <%=link_to "Alterar", edit_student_path(student) %>   
+            </small>
+         </dd>
+
+
+      <% end %>      
    </dl>
+
 <% else %>
+
    Nenhum registro!
-<% end%>
+
+<% end %>
+
 </section>

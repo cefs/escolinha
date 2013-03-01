@@ -2,14 +2,16 @@
 
    <%= render "shared/error_messages", :record => @student %>
 
-   
-      <%= f.input :name, required: true%>
-   
-
-      <%= f.input :course_id, collection: Course.all  %>
-   
-
    <p>
-      <%= f.button :submit %>
+      <%= f.input :name, required: true%>
    </p>
+   
+   <p>
+      <%= f.input :course_id, collection: courses  %>
+   </p>
+   
+   <p>
+      <%= f.button :submit %>   
+   </p>
+   
 <% end %>
