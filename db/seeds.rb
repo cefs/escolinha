@@ -8,16 +8,16 @@ Room.delete_all
 
 
 10.times.each do |i|
-   Course.create :name => "Turma #{i + 1}" 
+   Course.create :name => "Turma #{i}" 
 end
 10.times.each do |i|
-   Discipline.create :name => "Disciplina #{i + 1}" 
-end
-
-10.times.each do |i|
-   Student.create :name => "João Pedro#{i + 1}º", :course_id => i + 1
+   Discipline.create :name => "Disciplina #{i}" 
 end
 
 10.times.each do |i|
-   Teacher.create :name => "Luis Pedro #{i + 1}º"
+   Student.create :name => "Carlos #{i}", :course_id => i + 1
+end
+
+10.times.each do |i|
+   Teacher.create :name => "Pedro #{i}"
 end
