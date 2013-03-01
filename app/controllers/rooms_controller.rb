@@ -1,4 +1,8 @@
 class RoomsController < ApplicationController
+
+   #Load dropdown
+   helper_method :teachers, :courses, :disciplines
+
    def new
       @room = Room.new
    end
@@ -21,4 +25,15 @@ class RoomsController < ApplicationController
       redirect_to courses_path
    end
 
+   def teachers
+      Teacher.order(:name)
+   end
+
+   def courses
+      Course.order(:name)
+   end
+
+   def disciplines
+      Discipline.order(:name)
+   end
 end
