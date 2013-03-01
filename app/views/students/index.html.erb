@@ -4,19 +4,23 @@
    <%= link_to t("nav.link.students.register"), new_student_path %>
 </p>
 
-<table class="table">
-   <tr>
-      <th>Nome</th>
-      <th></th>
-   </tr>
-
-   <% @students.each do |student| %>
+<% unless @students.empty? %>
+   <table class="table">
       <tr>
-         <td><%= student.name %></td>
-         <td><%= link_to(t("helpers.link.student.edit"), edit_student_path(student))%></td>
+         <th>Nome</th>
+         <th></th>
       </tr>
-   <% end %>
-</table>
+
+      <% @students.each do |student| %>
+         <tr>
+            <td><%= student.name %></td>
+            <td><%= link_to(t("helpers.link.student.edit"), edit_student_path(student))%></td>
+         </tr>
+      <% end %>
+   </table>
+<% else %>
+   Nenhum registro!
+<% end %>
 
 <p>
    <%= paginate @students, :size => 4 %>

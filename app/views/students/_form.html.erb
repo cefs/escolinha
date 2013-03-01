@@ -1,18 +1,15 @@
-<%= form_for @student do |f| %>
+<%= simple_form_for @student do |f| %>
 
    <%= render "shared/error_messages", :record => @student %>
 
-   <p>
-      <%= f.label :name %>
-      <%= f.text_field :name %>
-   </p>
+   
+      <%= f.input :name, required: true%>
+   
+
+      <%= f.input :course_id, collection: Course.all  %>
+   
 
    <p>
-      <%= f.label :course_id %>
-      <%= f.collection_select :course_id, Course.all, :id, :name, :include_blank => true  %>
-   </p>
-
-   <p>
-      <%= f.submit %>
+      <%= f.button :submit %>
    </p>
 <% end %>

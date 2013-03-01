@@ -4,20 +4,23 @@
    <%= link_to t("nav.link.disciplines.register"), new_discipline_path %>
 </p>
 
-<table class="table">
-   <tr>
-      <th>Nome</th>
-      <th></th>
-   </tr>
-
-   <% @disciplines.each do |discipline| %>
+<% unless @disciplines.empty? %>
+   <table class="table">
       <tr>
-         <td><%= discipline.name %></td>
-         <td><%= link_to(t("helpers.link.discipline.edit"), edit_discipline_path(discipline))%></td>
+         <th>Nome</th>
+         <th></th>
       </tr>
-   <% end %>
-</table>
 
+      <% @disciplines.each do |discipline| %>
+         <tr>
+            <td><%= discipline.name %></td>
+            <td><%= link_to(t("helpers.link.discipline.edit"), edit_discipline_path(discipline))%></td>
+         </tr>
+      <% end %>
+   </table>
+<% else %>
+   Nenhum registro!
+<% end %>
 <p>
    <%= paginate @disciplines, :size => 4 %>
 </p>

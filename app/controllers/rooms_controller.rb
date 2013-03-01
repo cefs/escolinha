@@ -1,6 +1,6 @@
 class RoomsController < ApplicationController
 
-   #Load dropdown
+   #Load dropdown    
    helper_method :teachers, :courses, :disciplines
 
    def new

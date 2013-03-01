@@ -1,14 +1,12 @@
-<%= form_for @teacher do |f| %>
+<%= simple_form_for @teacher do |f| %>
 
    <%= render "shared/error_messages", :record => @teacher %>
 
-   <p>
-      <%= f.label :name %>
-      <%= f.text_field :name %>
-      <%#= error_for @teacher, :name %>
+   <p>      
+      <%= f.input :name, requered: true %>
    </p>
 
    <p>
-      <%= f.submit %>
+      <%= f.button :submit %>
    </p>
 <% end %>

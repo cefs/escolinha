@@ -3,6 +3,7 @@ source :rubygems
 gem 'rails', '3.2.11'
 gem 'jquery-rails'
 gem 'paginate'
+gem 'simple_form'
 
 group :development do
 	gem "pry", :require => false

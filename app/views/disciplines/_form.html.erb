@@ -1,13 +1,12 @@
-<%= form_for @discipline do |f| %>
+<%= simple_form_for @discipline do |f| %>
 
    <%= render "shared/error_messages", :record => @discipline %>
 
-   <p>
-      <%= f.label :name %>
-      <%= f.text_field :name %>
+   <p>      
+      <%= f.input :name, requered: true %>
    </p>
 
    <p>
-      <%= f.submit %>
+      <%= f.button :submit %>
    </p>
 <% end %>

@@ -4,20 +4,24 @@
    <%= link_to t("nav.link.courses.register"), new_course_path %>
 </p>
 
-<table class="table">
-   <tr>
-      <th>Nome</th>
-      <th></th>
-   </tr>
-
-   <% @courses.each do |course| %>
+<% unless @courses.empty? %>
+   <table class="table">
       <tr>
-         <td><%= course.name %></td>
-         <td><%= link_to(t("helpers.link.course.show"), course_path(course))%></td>
-         <td><%= link_to(t("helpers.link.course.edit"), edit_course_path(course))%></td>
+         <th>Nome</th>
+         <th></th>
       </tr>
-   <% end %>
-</table>
+
+      <% @courses.each do |course| %>
+         <tr>
+            <td><%= course.name %></td>
+            <td><%= link_to(t("helpers.link.course.show"), course_path(course))%></td>
+            <td><%= link_to(t("helpers.link.course.edit"), edit_course_path(course))%></td>
+         </tr>
+      <% end %>
+   </table>
+<% else %>
+   Nenhum registro!
+<% end %>
 
 <p>
    <%= paginate @courses, :size => 4 %>
