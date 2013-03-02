@@ -21,6 +21,10 @@ describe "Create teacher" do
 			current_path.should eql(teachers_path)
 		end
 
+      it "should not message of register not found" do
+         page.should_not have_content("Nenhum registro!")
+      end
+
 		it "displays success message" do
 			page.should have_content("O professor foi cadastrado com sucesso!")
 		end

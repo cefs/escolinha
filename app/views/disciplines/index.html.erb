@@ -19,7 +19,7 @@
       <% end %>
    </table>
 <% else %>
-   Nenhum registro!
+   <%= t("page.list.without.text") %>
 <% end %>
 <p>
    <%= paginate @disciplines, :size => 10 %>

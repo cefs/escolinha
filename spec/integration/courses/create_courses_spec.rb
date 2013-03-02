@@ -21,6 +21,10 @@ describe "Create Curso" do
          current_path.should eql(courses_path)
       end
 
+      it "should not message of register not found" do
+         page.should_not have_content("Nenhum registro!")
+      end
+
       it "displays success message" do
          page.should have_content("A turma foi cadastrada com sucesso!")
       end

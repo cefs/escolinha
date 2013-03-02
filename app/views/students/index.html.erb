@@ -19,8 +19,8 @@
       <% end %>
    </table>
 <% else %>
-   Nenhum registro!
-<% end %>
+   <%= t("page.list.without.text") %>
+<% end %>   
 
 <p>
    <%= paginate @students, :size => 10 %>

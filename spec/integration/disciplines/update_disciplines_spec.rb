@@ -21,6 +21,10 @@ describe "Update Disciplines" do
          current_path.should eql(disciplines_path)
       end
 
+      it "should not message of register not found" do
+         page.should_not have_content("Nenhum registro!")
+      end
+
       it "displays success messages" do
          page.should have_content("A disciplina foi atualizada com sucesso!")
       end

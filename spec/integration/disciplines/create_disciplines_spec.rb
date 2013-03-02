@@ -21,6 +21,10 @@ describe "Create Discipline" do
          current_path.should eql(disciplines_path)
       end
 
+      it "should not message of register not found" do
+         page.should_not have_content("Nenhum registro!")
+      end
+
       it "displays success message" do
          page.should have_content("A disciplina foi criada com sucesso!")
       end

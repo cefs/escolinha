@@ -1,4 +1,8 @@
 pt-BR:
   page:
     home: "Página Principal"
+    list:
+      without:
+         text: "Nenhum registro!"
+
 

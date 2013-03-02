@@ -21,10 +21,13 @@ describe "Update Teacher" do
          current_path.should eql(teachers_path)
       end
 
+      it "should not message of register not found" do
+         page.should_not have_content("Nenhum registro!")
+      end
+
       it "displays message success" do
          page.should have_content("O professor foi atualizado com sucesso!")
       end
-
    end
 
    context "with invalid data" do
