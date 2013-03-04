@@ -31,7 +31,7 @@ class TeachersController < ApplicationController
       def update
          @teacher = Teacher.find params[:id]
 
-         if @teacher.update_attributes  params[:teacher]
+         if @teacher.update_attributes params[:teacher]
             flash[:notice] = t("flash.teachers.update.notice")
             redirect_to teachers_path
          else
