@@ -32,7 +32,9 @@ pt-BR:
             edit: "Editar"
          teacher:
             edit: "Editar"
+            picture: "Inserir foto"
             show: "Detalhar"
+
          course:
             edit: "Editar"
             show: "Detalhar"

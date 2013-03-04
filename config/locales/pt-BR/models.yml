@@ -3,6 +3,7 @@ pt-BR:
       attributes:
          teacher:
             name: "Nome do professor"
+            picture: "Imagem do professor:"
          course:
             name: "Nome da turma"
          student:

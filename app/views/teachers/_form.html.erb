@@ -2,6 +2,10 @@
 
    <%= render "shared/error_messages", :record => @teacher %>
 
+   <p>
+      <%= f.file_field :picture %>
+   </p>
+
    <p>      
       <%= f.input :name, requered: true %>
    </p>
@@ -9,4 +13,5 @@
    <p>
       <%= f.button :submit %>
    </p>
+
 <% end %>

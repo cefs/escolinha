@@ -6,6 +6,8 @@ gem 'paginate'
 gem 'simple_form'
 gem 'friendly_id', '~> 4.0.9'
 gem 'thin'
+gem 'carrierwave'
+gem 'rmagick'
 
 group :development do
 	gem "pry", :require => false

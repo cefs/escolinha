@@ -1,36 +1,10 @@
+<% if @teacher.has_picture %>
+   <%= image_tag(@teacher.thumb_url) %>
+<% else %>   
+   <%= link_to(t("helpers.link.teacher.picture"), edit_teacher_path(@teacher)) %>
+<% end %>   
+
 <h2>
    <%= @teacher.name %>
 </h2>
 
-
-<% @rooms.each do |item| %>
-   <%= item.inspect %><br />
-<% end %>
-
-<section class="box">
-   <h4>Turma(s)</h4>
-   <% unless @rooms.empty? %>
-      <dl>
-         <% @rooms.each do |room| %>
-            <dt><%= link_to room.course.name, course_path(room.course.id) %></dt>
-         <% end %>
-      </dl>
-   <% else %>
-      Nenhum registro!
-   <% end %>
-
-</section>
-
-<section class="box">
-   <h4>Disciplina(s)</h4>
-   <% unless @rooms.empty? %>
-      <dl>
-         <% @rooms.each do |room| %>
-            <dt><%= link_to room.discipline.name, edit_discipline_path(room.discipline.id) %></dt>
-         <% end %>
-      </dl>
-   <% else %>
-      Nenhum registro!
-   <% end %>
-
-</section>
