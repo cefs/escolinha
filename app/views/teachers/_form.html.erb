@@ -3,6 +3,14 @@
    <%= render "shared/error_messages", :record => @teacher %>
 
    <p>
+      <% if @teacher.has_picture %>
+         <%= image_tag(@teacher.thumb_url)  %>         
+         <% text = "Mudar foto:" %>
+      <% else %>
+         <% text = "Inserir foto:" %>
+      <% end %>
+      <br />
+      <%= f.label "#{text}" %>
       <%= f.file_field :picture %>
    </p>
 
