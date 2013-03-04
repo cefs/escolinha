@@ -7,9 +7,9 @@ describe Course, "Validations" do
    it { should_not allow(nil).for(:name) }
 
    context "name uniqueness" do
-      let(:course) { courses(:turma_1) }
+      let(:course) { courses(:turma_1) }      
 
-      xit { should_not allow(course.name).for(:name) }
+      it { should_not allow(course.name).for(:name) }
    end
 end
    

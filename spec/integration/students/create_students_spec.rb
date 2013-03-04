@@ -13,7 +13,7 @@ describe "Create Student", :js => false do
          click_link "Cadastre o aluno"         
 
          fill_in "Nome do aluno", :with => student.name
-         fill_in "E-mail do aluno", :with => student.email
+         fill_in "E-mail do aluno", :with => "example@gmail.com"
 
          page.should have_selector('select#student_course_id')
 

@@ -7,6 +7,7 @@ class Student < ActiveRecord::Base
    belongs_to :course #:counter_cache => true
 
    validates_presence_of :name, :email
+   validates_uniqueness_of :email
 
    friendly_id :name, :use => :slugged
 end

@@ -14,6 +14,7 @@ describe "Update Student", :js => false do
          click_link "Editar"
 
          fill_in "Nome do aluno", :with => student.name         
+         fill_in "E-mail do aluno", :with => student.email         
          select course.name, :from => "Curso"
 
          click_button "Atualizar aluno"
@@ -39,6 +40,7 @@ describe "Update Student", :js => false do
          click_link "Editar"
 
          fill_in "Nome do aluno", :with => nil         
+         fill_in "E-mail do aluno", :with => nil
          select course.name, :from => "Curso"
 
          click_button "Atualizar aluno"

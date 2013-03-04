@@ -4,7 +4,7 @@
 
 describe "Create Curso" do
 
-   let(:course) { courses(:turma_1) }
+   #let(:course) { courses(:turma_1) }
 
    context "with valid data" do
       before do
@@ -12,7 +12,7 @@ describe "Create Curso" do
          click_link "Turmas"
          click_link "Cadastre a turma"
 
-         fill_in "Nome da turma", :with => course.name
+         fill_in "Nome da turma", :with => "Turma teste"
 
          click_button "Cadastrar turma"
       end
