@@ -4,5 +4,8 @@ pt-BR:
     list:
       without:
          text: "Nenhum registro!"
+    title: "TURMAS CADASTRADAS"
+    search_result: "Resultados encontrados"
+   
 
 

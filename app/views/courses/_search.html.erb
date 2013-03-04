@@ -1,0 +1,6 @@
+<p>
+   <%= form_tag "", :method => :get, :class => "search_form" do %>
+      <%= t("form.search.label") %>
+      <%= text_field_tag :q, @query_search, :placeholder => t("form.search.for") %>      
+   <% end %>   
+</p>

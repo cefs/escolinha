@@ -60,3 +60,11 @@ label.collection_check_boxes {
   vertical-align: -2px;
   margin-left: 2px;
 }
+
+.search_form input[type="text"] {
+  box-sizing: border-box;
+  width: 60%;
+  min-height: 28px;
+  padding: 4px 20px 4px 8px;
+  font-size: 12px;
+}

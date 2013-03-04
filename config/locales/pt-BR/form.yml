@@ -1,13 +1,15 @@
 pt-BR:
    form:
+      search:
+         label: "Pesquise por:"
+         for: "Turma/Professor"
       error_messages: "Verifique o formulário antes de continuar:"
       labels:
          email: "E-mail"
          password: "Senha"
-
    buttons:
       login: "Entrar"
-   
+      
    helpers:
       submit:
          teacher:

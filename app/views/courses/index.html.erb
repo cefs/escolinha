@@ -1,4 +1,13 @@
-<h3>Turmas Cadastradas</h3>
+<h3>
+   <% if @search_query.present? %>
+      <%= t("page.search_result") %>
+   <% else %>
+      <%= t("page.title") %>
+   <% end %>
+</h3>
+
+<%= render "search" %>
+
 
 <p>
    <%= link_to t("nav.link.courses.register"), new_course_path %>
@@ -12,11 +21,21 @@
       </tr>
 
       <% @courses.each do |course| %>
+
          <tr>
             <td><%= course.name %></td>
             <td><%= link_to(t("helpers.link.course.show"), course_path(course))%></td>
             <td><%= link_to(t("helpers.link.course.edit"), edit_course_path(course))%></td>
+         </tr>         
+
+         <tr>
+            <% course.rooms.each do |c| %>
+                  <td style="font-size:10px;border: 1px solid #98BF21; background-color: #98BF45;font-weight:bold">
+                     <%= "#{c.teacher.name} ministrando #{c.discipline.name}" %>
+                  </td>
+            <% end %>
          </tr>
+
       <% end %>
    </table>
 <% else %>
@@ -24,6 +43,8 @@
 <% end %>
 
 <p>
-   <%= paginate @courses, :size => 10 %>
+   <% unless @courses.empty? %>
+      <%= paginate @courses, :size => 8 %>
+   <% end %>
 </p>
 

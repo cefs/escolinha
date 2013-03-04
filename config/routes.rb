@@ -6,4 +6,6 @@ Escolinha::Application.routes.draw do
    resources :disciplines  
    resources :rooms
    resources :students
+
+   get '/testes' => "courses#list"
 end

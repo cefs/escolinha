@@ -1,7 +1,10 @@
 class CoursesController < ApplicationController
    def index
-      @courses = Course.paginate :page => params[:page], :size => 10
-   end
+      @search_query = params[:q]
+      page         = params[:page]
+
+      @courses = Course.search(@search_query, page)
+   end   
 
    def new
       @course = Course.new

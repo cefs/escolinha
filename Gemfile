@@ -18,6 +18,7 @@ group :development, :test do
 	gem "capybara"
    gem "sqlite3"
    #gem "database_cleaner"
+   #gem 'cucumber'
 end
 
 group :test do

@@ -9,4 +9,13 @@ class Course < ActiveRecord::Base
    validates_presence_of :name
 
    friendly_id :name, :use => :slugged
+
+   def self.search(query,page)
+      if query.present?         
+         joins("LEFT JOIN rooms on rooms.course_id = courses.id LEFT JOIN teachers on rooms.teacher_id = teachers.id").         
+         where(["courses.name #{AdapterSpecific.like_case_insensitive} :query OR teachers.name #{AdapterSpecific.like_case_insensitive} :query", :query => "%#{query}%"]).group("courses.id")
+      else         
+         paginate :page => page, :size => 8
+      end
+   end
 end
