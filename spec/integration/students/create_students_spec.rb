@@ -10,9 +10,10 @@ describe "Create Student", :js => false do
       before do
          visit "/"
          click_link "Alunos"
-         click_link "Cadastre o aluno"
+         click_link "Cadastre o aluno"         
 
          fill_in "Nome do aluno", :with => student.name
+         fill_in "E-mail do aluno", :with => student.email
 
          page.should have_selector('select#student_course_id')
 

@@ -15,6 +15,9 @@ class StudentsController < ApplicationController
 
       if @student.save
          flash[:notice] = t("flash.students.create.notice")
+
+         MatriculandoMailer.email_do_matriculado(@student).deliver
+
          redirect_to students_path
       else
          render :new

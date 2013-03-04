@@ -7,6 +7,7 @@ FactoryGirl.define do
 
    factory :student do
       sequence(:name) {|n| "Carlos Eduardo #{n}" }
+      sequence(:email) {|n| "cefs198#{n}@gmail.com" }
    end
 
    factory :course do
